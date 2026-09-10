@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEVİNÇ Beauty & Care</title>
+<meta name="description" content="SEVİNÇ Beauty & Care — güzellik ve kişisel bakım ürünleri.">
+<style>
+:root{--brown:#3c292b;--rose:#a85d67;--soft:#f8e9e6;--cream:#fffaf8;--muted:#766a6b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--brown);background:var(--cream);font-family:Arial,sans-serif}
+.top{background:#f3deda;padding:9px 20px;display:flex;justify-content:center;gap:70px;font-size:12px;font-weight:700}
+header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;gap:30px}
+.logo{font:34px Georgia,serif;letter-spacing:6px}.logo small{display:block;font:10px Arial;letter-spacing:4px;text-align:center;margin-top:-5px}.links{display:flex;gap:28px;margin:auto}.links a{color:var(--brown);text-decoration:none;font-size:14px}.icons{display:flex;gap:10px}.icon{border:0;background:#f7efed;border-radius:50%;width:40px;height:40px;cursor:pointer}
+.hero{max-width:1180px;margin:auto;padding:22px}.hero img{width:100%;display:block;border-radius:8px;max-height:560px;object-fit:cover;object-position:center}
+section{max-width:1180px;margin:auto;padding:55px 22px}.heading{text-align:center;font:38px Georgia,serif;margin:0 0 28px}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}.cat{background:#f7dfda;border-radius:50%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:white;border:1px solid #eee1de;border-radius:15px;overflow:hidden}.photo{aspect-ratio:1;background:#f4e5e1;display:grid;place-items:center;color:#9a7e80}.photo img{width:100%;height:100%;object-fit:cover}.cardbody{padding:17px}.tag{display:inline-block;background:#c87982;color:white;border-radius:20px;padding:5px 9px;font-size:11px}.card h3{font:20px Georgia,serif;margin:12px 0 7px}.desc{font-size:13px;color:var(--muted);min-height:34px}.price{font-weight:800;font-size:17px;margin:14px 0}.btn{width:100%;border:0;background:var(--brown);color:#fff;border-radius:8px;padding:12px;font-weight:700;cursor:pointer}
+.benefits{background:#f7dfda;max-width:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:28px max(22px,calc((100% - 1136px)/2));text-align:center}.benefits b{display:block;margin-bottom:5px}.benefits span{font-size:12px;color:var(--muted)}
+.story{background:white;border-radius:20px;padding:35px;line-height:1.8;color:var(--muted);text-align:center}
+footer{background:var(--brown);color:#fff;padding:45px 22px;margin-top:20px}.foot{max-width:1180px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:30px}.foot h3{font:25px Georgia,serif;letter-spacing:4px}.foot a{display:block;color:#eadcda;text-decoration:none;margin:9px 0;font-size:13px}.foot p{color:#dac9c8;font-size:13px;line-height:1.7}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:20;padding:18px}.box{max-width:520px;background:#fff;margin:5vh auto;border-radius:20px;padding:25px;max-height:90vh;overflow:auto}.close{float:right;border:0;border-radius:50%;width:34px;height:34px}.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eee}input,textarea{width:100%;padding:12px;margin:5px 0 13px;border:1px solid #ddd;border-radius:8px}label{font-size:13px;font-weight:bold}
+@media(max-width:800px){.top{gap:15px;font-size:10px}.links{display:none}.cats{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.benefits{grid-template-columns:repeat(2,1fr)}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.logo{font-size:26px}.cats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.hero{padding:10px}.hero img{min-height:280px;object-fit:cover}.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top"><span>♡ %100 Orijinal Ürünler</span><span>🚚 Ücretsiz Kargo</span><span>♧ Güvenli Alışveriş</span><span>☏ 7/24 Destek</span></div>
+<header><nav><div class="logo">SEVİNÇ<small>BEAUTY & CARE</small></div><div class="links"><a href="#">Ana Sayfa</a><a href="#urunler">Ürünler</a><a href="#kategoriler">Kategoriler</a><a href="#hikaye">Hakkımızda</a><a href="#iletisim">İletişim</a></div><div class="icons"><button class="icon" onclick="document.getElementById('search').focus()">⌕</button><button class="icon" onclick="openCart()">🛒 <span id="count">0</span></button></div></nav></header>
+
+<main>
+<div class="hero"><img src="hero.png" alt="SEVİNÇ Beauty & Care"></div>
+
+<section id="kategoriler"><h2 class="heading">Kategoriler</h2><div class="cats"><div class="cat">Makyaj</div><div class="cat">Cilt<br>Bakımı</div><div class="cat">Parfüm</div><div class="cat">Saç<br>Bakımı</div><div class="cat">Vücut<br>Bakımı</div><div class="cat">Kişisel<br>Bakım</div></div></section>
+
+<section id="urunler"><h2 class="heading">Öne Çıkan Ürünler</h2><input id="search" oninput="render()" placeholder="Ürün ara..." style="display:block;max-width:420px;margin:0 auto 25px;width:100%;padding:13px;border:1px solid #ddd;border-radius:999px"><div class="grid" id="products"></div></section>
+
+<div class="benefits"><div>🚚<b>Ücretsiz Kargo</b><span>1000 TL ve üzeri siparişlerde</span></div><div>🛡️<b>Güvenli Ödeme</b><span>Güvenli alışveriş deneyimi</span></div><div>☎️<b>7/24 Destek</b><span>Her zaman yanınızdayız</span></div><div>🌿<b>Özenle Seçildi</b><span>Güzellik rutinin için</span></div></div>
+
+<section id="hikaye"><div class="story"><h2 class="heading">Güzellik Seninle Başlar</h2><p>SEVİNÇ, güzellik ve bakımı kendini iyi hissetmenin bir parçası olarak gören yeni nesil bir kozmetik markasıdır. Bu bölümü kendi marka hikâyenle değiştirebilirsin.</p></div></section>
+</main>
+
+<footer id="iletisim"><div class="foot"><div><h3>SEVİNÇ</h3><p>BEAUTY & CARE<br>Güzelliğin en zarif hali.</p></div><div><b>Hızlı Erişim</b><a href="#urunler">Ürünler</a><a href="#kategoriler">Kategoriler</a><a href="#hikaye">Hakkımızda</a></div><div><b>İletişim</b><p>+90 555 123 45 67<br>info@sevincbeauty.com<br>İstanbul / Türkiye</p></div><div><b>Bizi Takip Et</b><p>Instagram · TikTok · WhatsApp</p></div></div></footer>
+
+<div class="modal" id="modal"><div class="box"><button class="close" onclick="closeCart()">×</button><h2>Sepetim</h2><div id="cart"></div><h3>Toplam: <span id="total">0 TL</span></h3><label>Ad Soyad</label><input id="name" placeholder="Ad Soyad"><label>Telefon</label><input id="phone" placeholder="Telefon"><label>Adres</label><textarea id="address" placeholder="Teslimat adresi"></textarea><button class="btn" onclick="order()">WhatsApp'tan Sipariş Ver</button></div></div>
+
+<script>
+const products=[
+{id:1,name:"Sevinç Mat Ruj",price:299,tag:"Yeni",desc:"Uzun süre kalıcı, mat bitiş."},
+{id:2,name:"Cilt Bakım Serumu",price:399,tag:"%20 İndirim",desc:"Daha aydınlık ve nemli görünüm."},
+{id:3,name:"Eau de Parfum",price:799,tag:"Çok Satan",desc:"Zarif ve kalıcı koku."},
+{id:4,name:"Saç Maskesi",price:299,tag:"%15 İndirim",desc:"Onarıcı ve besleyici bakım."},
+{id:5,name:"Yüz Kremi",price:349,tag:"Yeni",desc:"Nemlendirici ve yenileyici."},
+{id:6,name:"Lip Oil",price:249,tag:"Yeni",desc:"Parlak ve bakımlı dudaklar."},
+{id:7,name:"Soft Blush",price:279,tag:"Çok Satan",desc:"Doğal görünümlü renk."},
+{id:8,name:"Body Mist",price:449,tag:"Yeni",desc:"Günlük ferah koku."}];
+let cart=[];const whatsapp="905551234567";
+function render(){let q=(document.getElementById("search")?.value||"").toLowerCase();document.getElementById("products").innerHTML=products.filter(p=>p.name.toLowerCase().includes(q)).map(p=>`<article class="card"><div class="photo">Ürün Fotoğrafı</div><div class="cardbody"><span class="tag">${p.tag}</span><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">₺${p.price.toLocaleString("tr-TR")}</div><button class="btn" onclick="add(${p.id})">Sepete Ekle</button></div></article>`).join("")}
+function add(id){let p=products.find(x=>x.id===id),q=cart.find(x=>x.id===id);q?q.qty++:cart.push({...p,qty:1});update()}
+function update(){document.getElementById("count").textContent=cart.reduce((a,b)=>a+b.qty,0);document.getElementById("cart").innerHTML=cart.length?cart.map(x=>`<div class="row"><span>${x.name} × ${x.qty}</span><b>₺${(x.price*x.qty).toLocaleString("tr-TR")}</b></div>`).join(""):"Sepet boş.";document.getElementById("total").textContent="₺"+cart.reduce((a,b)=>a+b.price*b.qty,0).toLocaleString("tr-TR")}
+function openCart(){document.getElementById("modal").style.display="block";update()}function closeCart(){document.getElementById("modal").style.display="none"}
+function order(){if(!cart.length)return alert("Sepet boş.");let msg="Merhaba, SEVİNÇ mağazasından sipariş vermek istiyorum:\n"+cart.map(x=>`• ${x.name} x${x.qty} = ₺${x.price*x.qty}`).join("\n")+"\n\nToplam: ₺"+cart.reduce((a,b)=>a+b.price*b.qty,0)+"\nAd Soyad: "+document.getElementById("name").value+"\nTelefon: "+document.getElementById("phone").value+"\nAdres: "+document.getElementById("address").value;location.href="https://wa.me/"+whatsapp+"?text="+encodeURIComponent(msg)}
+render();update();
+</script>
+</body></html>
