@@ -52,6 +52,12 @@ const products=[
 {id:5,name:"Yüz Kremi",price:349,tag:"Yeni",desc:"Nemlendirici ve yenileyici."},
 {id:6,name:"Lip Oil",price:249,tag:"Yeni",desc:"Parlak ve bakımlı dudaklar."},
 {id:7,name:"Soft Blush",price:279,tag:"Çok Satan",desc:"Doğal görünümlü renk."},
+<div class="product">
+  <img src="lila-sunger.jpg" alt="Лила гъбичка за грим">
+  <h3>Лила гъбичка за грим</h3>
+  <p>Мека и удобна гъбичка за равномерно нанасяне на грим.</p>
+  <strong>0,99 €</strong>
+</div>
 {id:8,name:"Body Mist",price:449,tag:"Yeni",desc:"Günlük ferah koku."}];
 let cart=[];const whatsapp="905551234567";
 function render(){let q=(document.getElementById("search")?.value||"").toLowerCase();document.getElementById("products").innerHTML=products.filter(p=>p.name.toLowerCase().includes(q)).map(p=>`<article class="card"><div class="photo">Ürün Fotoğrafı</div><div class="cardbody"><span class="tag">${p.tag}</span><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">₺${p.price.toLocaleString("tr-TR")}</div><button class="btn" onclick="add(${p.id})">Sepete Ekle</button></div></article>`).join("")}
